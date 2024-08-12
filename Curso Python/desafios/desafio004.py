@@ -1,0 +1,6 @@
+txt = input('Digite algo: ')
+tipo = type(txt)
+num = txt.isnumeric()
+alfa = txt.isalpha()
+maiuscula = txt.isupper()
+print('Tipo: {} Númerico: {} Alfabetico: {} Maiúsculas: {}'.format(tipo, num, alfa, maiuscula))
