@@ -1,4 +1,2 @@
-import math
-num = int(input('Valor: '))
-raiz = math.sqrt(num)
-print(f"A raiz de {num} e igual a {raiz}")
+import emoji
+print(emoji.emojize("Minha namorada é incrivel :rosto_sorridente_com_3_corações:", language='pt'))
