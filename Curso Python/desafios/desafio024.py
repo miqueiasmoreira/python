@@ -5,3 +5,5 @@ if (pesquisa == 0):
     print(f"A cidade de {nome_cidade} possui o 'SANTO' no nome")
 else:
     print(f"A cidade de {nome_cidade} não possui o 'SANTO' no nome")
+    
+
