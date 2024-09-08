@@ -16,7 +16,7 @@ def pesquisa_binaria(lista, item):
     return -1  # Se não achou o número
 
 lista = [1, 3, 5, 7, 9]
-item = 10
+item = 3
 
 resultado = pesquisa_binaria(lista, item)
 
