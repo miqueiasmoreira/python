@@ -24,3 +24,4 @@ if resultado != -1:
     print(f"Elemento encontrado no índice {resultado}")
 else:
     print("Elemento não encontrado")
+    
