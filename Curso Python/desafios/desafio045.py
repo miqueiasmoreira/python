@@ -28,21 +28,29 @@ sleep(0.2)
 # Mostrar resultado!
 
 computador = random.choice(lista)
+jogador = 'NADA'
 
 print("\033[1;35m-=-\033[m" * 20)
 print(f"Computador jogou {computador}")
 if option == 0:
     print(f"Jogador jogou PEDRA")
+    jogador = 'PEDRA'
 elif option == 1:
     print("Jogador jogou PAPEL")
+    jogador = 'PAPEL'
 elif option == 2:
     print("Jogador jogou TESOURA")
+    jogador = 'TESOURA'
 else:
     print("ERRO")
 print("\033[1;35m-=-\033[m" * 20)
 
-if computador == 'PEDRA' and option == 'TESOURA' or computador == 'TESOURA' and option == 'PAPEL' or computador == 'PAPEL' and option == 'PEDRA':
+# Resultado de quem venceu
+
+if computador == 'PEDRA' and jogador == 'TESOURA' or computador == 'TESOURA' and jogador == 'PAPEL' or computador == 'PAPEL' and jogador == 'PEDRA':
     print("COMPUTADOR VENCE")
-elif computador == option:
+elif computador == jogador:
     print("EMPATE")
+else:
+    print("JOGADOR VENCE")
 print("---FIM---")
