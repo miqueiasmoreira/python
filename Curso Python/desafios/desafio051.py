@@ -1,6 +1,11 @@
-termo = int(input('Digite o termo: '))
-razao = int(input('Digite a razão: '))
+print('=' * 20)
+print('10 TERMOS DE UMA PA')
+print('=' * 20)
 
-for c in range(1, 10+1):
-    for n in range(termo, razao):
-        print(n)
+termo = int(input('Primeiro termo: '))
+razao = int(input('Digite a razão: '))
+decimo = termo + (10 - 1) * razao
+
+for c in range(termo, decimo, razao):
+        print(c, end=' → ')
+print('ACABOU')
