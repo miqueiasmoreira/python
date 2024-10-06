@@ -1,36 +1,43 @@
 
+from time import sleep
 
-valor1 = float(input('Valor 1: '))
-valor2 = float(input('Valor 2: '))
+n1 = int(input('Primeiro valor: '))
+n2 = int(input('Segundo valor: '))
 
-print(f'''
-      [1] Somar
-      [2] Multiplicar
-      [3] Maior
-      [4] Novos números
-      [5] Sair do programa''')
-
-option = int(input('Digite sua opção: '))
-
-while option != 5:
-    if option == 1:
-        print(f'A soma entre {valor1} e {valor2} é {valor1 + valor2}')
-        break
-    elif option == 2:
-        print(f'A multiplicação entre {valor1} e {valor2} é {valor1 * valor2}')
-        break
-    elif option == 3:
-        if valor1 > valor2:
-            print(f'O valor1 {valor1} é maior que o valor2 {valor2}')
-            break
+opcao = 0
+while opcao != 5:
+    print('''
+    [1] Somar
+    [2] Multiplicar
+    [3] Maior
+    [4] Novos valores
+    [5] Sair do programa''')
+    opcao = int(input('>>>>> Qual é a sua opção?').strip())
+    if opcao == 1:
+        soma = n1 + n2
+        print(f'A soma entre {n1} e {n2} é {soma}')
+        print('-=' * 20)
+    elif opcao == 2:
+        produto = n1 * n2
+        print(f'O resultado de {n1} x {n2} é {produto}')
+        print('-=' * 20)
+    elif opcao == 3:
+        if n1 > n2:
+            maior = n1
         else:
-            print(f'O valor2 {valor2} é maior que o valor1 {valor1}')
-            break
-    elif option == 4:
-        valor1 = float(input('Valor 1: '))
-        valor2 = float(input('Valor 2: '))
-        break
-    elif option == 5:
-        print('Programa encerrado')
-
-    
+            maior = n2
+        print(f'Entre {n1} e {n2} o maior valor é {maior}')
+        print('-=' * 20)
+    elif opcao == 4:
+        print('Informe os números novamente:')
+        n1 = int(input('Primeiro valor: '))
+        n2 = int(input('Segundo valor: '))
+        print('-=' * 20)
+    elif opcao == 5:
+        print('Finalizando...')
+    else:
+        print('Opção inválida. Tente novamente.')
+        print('-=' * 20)
+sleep(2)
+print('Fim do programa! Volte sempre!')
+print('-=' * 20)
