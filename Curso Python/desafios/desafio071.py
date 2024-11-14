@@ -1,4 +1,4 @@
-print('---' * 10)
+'''print('---' * 10)
 print('BANCO CEV')
 print('---' * 10)
 
@@ -18,4 +18,25 @@ while True:
         print(f'Total de {valor // 1:.0f} cédulas de R$1')
     valor = valor % 1
     if valor == 0:
-        break
+        break'''
+        
+valor = int(input('Que valor você quer sacar? R$').strip())
+total = valor
+ced = 50
+totced = 0
+while True:
+    if total >= ced:
+        total -= ced
+        totced += 1
+    else:
+        print(f'Total de {totced} cédulas de R${ced}')
+        if ced == 50:
+            ced = 20
+        elif ced == 20:
+            ced = 10
+        elif ced == 10:
+            ced = 1
+        if total == 0:
+            break
+
+    
