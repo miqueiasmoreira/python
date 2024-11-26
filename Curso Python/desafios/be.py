@@ -18,7 +18,10 @@ for i in range(tamanho):
         print("#", end="")
     print()  # Pula para a próxima linha'''
 
-a = (2, 5, 4)
+'''a = (2, 5, 4)
 b = (5, 8, 1, 2)
 c = a + b
-print(c)
+print(c)'''
+
+txt = input("Digite uma mensagem: ".strip())
+print(txt)
