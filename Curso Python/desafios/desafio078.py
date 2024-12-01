@@ -1,21 +1,24 @@
-valores = list()
+valores = []
+maior = 0
+menor = 0
 for cont in range(0, 5):
-    valores.append(input(f'Digite um valor para posição {cont}: '))
-    maior = menor = 0
-    if cont == 1:
-        maior = enumerate(valores)
-        menor = enumerate(valores)
+    valores.append(int(input(f'Digite um valor para posição {cont}: ')))
+    if cont == 0:
+        maior = menor = valores[cont]
     else:
-        if maior < enumerate(valores):
-            maior = enumerate(valores)
-        if menor > enumerate(valores):
-            menor = enumerate(valores)
-print(f'O menor valor é {min(valores)} na posicão {menor}')
-print(f'O maior valor é {max(valores)} na posição {maior}')
-
-
-
-
+        if valores[cont] > maior:
+            maior = valores[cont]
+        if valores[cont] < menor:
+            menor = valores[cont]
+print(f'O menor valor é {min(valores)} na posicão', end=' ')
+for i, v in enumerate(valores):
+    if v == menor:
+        print(f'{i}... ')
+print(f'O maior valor é {max(valores)} na posição', end=' ')
+for i, v in enumerate(valores):
+    if v == maior:
+        print(f'{i}... ')
+print()
 
 
 
